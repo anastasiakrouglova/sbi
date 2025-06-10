@@ -1089,33 +1089,28 @@ def build_zuko_flow(
 
         # Only x (i.e., prior for NPE) can be transformed to unbound space (not y)
         # when x_dist is provided.
-        if (
-            z_score_x == "transform_to_unconstrained"
-            and x_dist is not None
-            and hasattr(x_dist, "support")
-        ):
-            transform_to_unconstrained = mcmc_transform(x_dist)
-            transform = (
-                biject_transform_zuko(transform_to_unconstrained),
-                transform,
-            )
-        elif z_score_x == "transform_to_unconstrained" and x_dist is None:
-            raise ValueError(
-                "Transformation to unconstrained space requires a distribution"
-                "provided through `x_dist`",
-            )
+        if z_score_x == "transform_to_unconstrained":
+            if x_dist is None:
+                raise ValueError(
+                    "Transformation to unconstrained space requires a distribution "
+                    "provided through `x_dist`."
+                )
+            elif not hasattr(x_dist, "support"):
+                raise ValueError(
+                    "`x_dist` requires a `.support` attribute for"
+                    "an unconstrained transformation."
+                )
+            else:
+                transform_to_unconstrained = mcmc_transform(x_dist)
+                transform = (
+                    biject_transform_zuko(transform_to_unconstrained),
+                    transform,
+                )
+                
         elif z_score_x_bool:
             transform = (
                 standardizing_transform_zuko(batch_x, structured_x),
                 transform,
-            )
-        elif (
-            z_score_x == "transform_to_unconstrained"
-            and x_dist is not None
-            and not hasattr(x_dist, "support")
-        ):    
-            raise ValueError(
-                "S `x_dist` is passed but lacks `support` attribute.",
             )
 
         z_score_y_bool, structured_y = z_score_parser(z_score_y)
