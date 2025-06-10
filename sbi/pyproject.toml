@@ -1,0 +1,157 @@
+[build-system]
+requires = [
+    "setuptools>=65", "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbi"
+description = "Simulation-based inference."
+authors = [
+    { name = "sbi-dev", email = "simulation.based.inference@gmail.com"},
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Adaptive Technologies",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    """License :: OSI Approved :: Apache Software License""",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+]
+requires-python = ">=3.10"
+dynamic = ["version"]
+readme = "README.md"
+keywords = ["Bayesian inference", "simulation-based inference", "PyTorch"]
+dependencies = [
+    "arviz",
+    "joblib>=1.0.0",
+    "matplotlib",
+    "notebook <= 6.4.12",
+    "numpy",
+    "pillow",
+    "pyknos>=0.16.0",
+    "pyro-ppl>=1.3.1",
+    "scikit-learn",
+    "scipy",
+    "tensorboard",
+    "torch>=1.13.0, <2.6.0",
+    "tqdm",
+    "pymc>=5.0.0",
+    "zuko>=1.2.0",
+]
+
+[project.optional-dependencies]
+doc = [
+    # Documentation
+    "ipython <= 8.9.0",
+    "jupyter_contrib_nbextensions",
+    "mike",
+    "mkdocs",
+    "markdown-include",
+    "mkdocs-material",
+    "mkdocs-redirects",
+    "mkdocstrings[python] >= 0.18",
+    "nbconvert",
+    "nbformat",
+    "traitlets <= 5.9.0",
+    "sphinx",
+    "sphinx-autobuild",
+    "sphinx_autodoc_typehints",
+    "sphinx-math-dollar",
+    "myst-nb",
+    "jupytext",
+    "sphinx-book-theme",
+]
+dev = [
+    "ffmpeg",
+    # Lint
+    "pre-commit == 4.0.1",
+    "pyyaml",
+    "pyright",
+    "ruff==0.9.0",
+    # Test
+    "pytest",
+    "pytest-cov",
+    "pytest-testmon",
+    "pytest-xdist",
+    "pytest-harvest",
+    "pytest-split",
+    "torchtestcase",
+]
+
+[project.urls]
+documentation = "https://sbi-dev.github.io/sbi/"
+source = "https://github.com/sbi-dev/sbi"
+tracker = "https://github.com/sbi-dev/sbi/issues"
+
+# Package installation configuration
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["sbi*"]  # package names should match these glob patterns (["*"] by default)
+exclude = ["sbi-logs*"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
+
+[tool.setuptools.dynamic]
+version = {attr = "sbi.__version__"}
+
+# ruff configs
+[tool.ruff]
+extend-include = ["*.ipynb"]
+line-length = 88
+
+[tool.ruff.lint]
+# pycodestyle, Pyflakes, pyupgrade, flake8-bugbear, flake8-simplify, isort
+select = ["E", "F", "W", "B", "SIM", "I"]
+ignore = [
+    "E731",  # allow naming lambda functions.
+    "B008",  # allow function calls in default args.
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["E402", "F401", "F403"]  # allow unused imports and undefined names
+"test_*.py" = ["F403", "F405"]
+"docs/tutorials/*.ipynb" = ["E501"]  # allow long lines in notebooks
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+lines-between-types = 0  # like isort default.
+relative-imports-order = "furthest-to-closest"  # like isort default.
+known-first-party = ["sbi", "tests", "docs/tutorials"]
+
+[tool.ruff.format]
+exclude = ["*.ipynb"]
+preview = true
+quote-style = "preserve"
+
+# Pytest configuration
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning"
+]
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "gpu: marks tests that require a gpu (deselect with '-m \"not gpu\"')",
+    "mcmc: marks tests that require MCMC sampling (deselect with '-m \"not mcmc\"')",
+    "benchmark: marks test that are soley for benchmarking purposes"
+]
+xfail_strict = true
+
+# Pyright configuration
+[tool.pyright]
+include = ["sbi"]
+exclude = ["**/__pycache__", "**/__node_modules__", ".git", "docs", "mkdocs", "tests"]
+python_version = "3.10"
+reportUnsupportedDunderAll = false
+reportGeneralTypeIssues = false
+reportInvalidTypeForm = false
+typeCheckingMode = "basic"
