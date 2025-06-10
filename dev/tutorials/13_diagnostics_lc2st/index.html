@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -131,11 +131,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -167,6 +169,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -238,6 +241,7 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Home
     
@@ -256,8 +260,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Tutorials and Examples
@@ -280,6 +285,7 @@
       <a href="../../reference/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     API Reference
     
@@ -300,6 +306,7 @@
     <li class="md-nav__item">
       <a href="../../faq/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     FAQ
@@ -322,6 +329,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -331,6 +339,7 @@
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Contributing
@@ -358,6 +367,7 @@
       <a href="../../contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     How to contribute
     
@@ -379,6 +389,7 @@
     <li class="md-nav__item">
       <a href="../../code_of_conduct/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Code of Conduct
@@ -409,6 +420,7 @@
       <a href="../../citation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Citation
     
@@ -429,6 +441,7 @@
     <li class="md-nav__item">
       <a href="../../credits/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Credits
@@ -629,8 +642,8 @@
 
 <h1 id="local-classifier-two-sample-tests-l-c2st">Local Classifier Two-Sample Tests (L-C2ST)<a class="headerlink" href="#local-classifier-two-sample-tests-l-c2st" title="Permanent link">&para;</a></h1>
 <p>After a density estimator has been trained with simulated data to obtain a posterior, the estimator should be made subject to several diagnostic tests. This diagnostic should be performed before the posterior is used for inference given the actual observed data. </p>
-<p><em>Posterior Predictive Checks</em> (see <a href="https://sbi.readthedocs.io/en/latest/tutorials/10_diagnostics_posterior_predictive_checks.html">tutorial 10</a>) provide one way to &ldquo;critique&rdquo; a trained estimator via its predictive performance. </p>
-<p>Another approach is <em>Simulation-Based Calibration</em> (SBC, see <a href="https://sbi.readthedocs.io/en/latest/tutorials/11_diagnostics_simulation_based_calibration.html">tutorial 11</a>). SBC evaluates whether the estimated posterior is balanced, i.e., neither over-confident nor under-confident. These checks are performed <strong><em>in expectation (on average) over the observation space</em></strong>, i.e. they are performed on a set of <span class="arithmatex">\((\theta,x)\)</span> pairs sampled from the joint distribution over simulator parameters <span class="arithmatex">\(\theta\)</span> and corresponding observations <span class="arithmatex">\(x\)</span>. As such, SBC is a <strong><em>global validation method</em></strong> that can be viewed as a necessary condition (but not sufficient) for a valid inference algorithm: If SBC checks fail, this tells you that your inference is invalid. If SBC checks pass, <em>this is no guarantee that the posterior estimation is working</em>.</p>
+<p><em>Posterior Predictive Checks</em> (see <a href="https://sbi.readthedocs.io/en/latest/advanced_tutorials/10_diagnostics_posterior_predictive_checks.html">this tutorial</a>) provide one way to &ldquo;critique&rdquo; a trained estimator via its predictive performance. </p>
+<p>Another approach is <em>Simulation-Based Calibration</em> (SBC, see <a href="https://sbi.readthedocs.io/en/latest/how_to_guide/16_sbc.html">this tutorial</a>). SBC evaluates whether the estimated posterior is balanced, i.e., neither over-confident nor under-confident. These checks are performed <strong><em>in expectation (on average) over the observation space</em></strong>, i.e. they are performed on a set of <span class="arithmatex">\((\theta,x)\)</span> pairs sampled from the joint distribution over simulator parameters <span class="arithmatex">\(\theta\)</span> and corresponding observations <span class="arithmatex">\(x\)</span>. As such, SBC is a <strong><em>global validation method</em></strong> that can be viewed as a necessary condition (but not sufficient) for a valid inference algorithm: If SBC checks fail, this tells you that your inference is invalid. If SBC checks pass, <em>this is no guarantee that the posterior estimation is working</em>.</p>
 <p><strong>Local Classifier Two-Sample Tests</strong> (<span class="arithmatex">\(\ell\)</span>-C2ST) as developed by <a href="https://arxiv.org/abs/2306.03580">Linhart et al, 2023</a> present a new <strong><em>local validation method</em></strong> that allows to evaluate the correctness of the posterior estimator <strong><em>at a fixed observation</em></strong>, i.e. they work on a single <span class="arithmatex">\((\theta,x)\)</span> pair. They provide necessary <em>and sufficient</em> conditions for the validity of the SBI algorithm, as well as easy-to-interpret qualitative and quantitative diagnostics. </p>
 <p>If global checks (like SBC) fail, <span class="arithmatex">\(\ell\)</span>-C2ST allows to further investigate where (for which observation) and why (bias, overdispersion, etc.) the posterior estimator fails. If global validation checks pass, <span class="arithmatex">\(\ell\)</span>-C2ST allows to guarantee whether the inference is correct for a specific observation.</p>
 <h2 id="in-a-nutshell">In a nutshell<a class="headerlink" href="#in-a-nutshell" title="Permanent link">&para;</a></h2>
@@ -691,10 +704,12 @@
 <li>show you where (for which observation) and why (bais, overdispersion, etc.) it fails </li>
 </ul>
 <h2 id="illustration-on-a-benchmark-sbi-example">Illustration on a benchmark SBI example<a class="headerlink" href="#illustration-on-a-benchmark-sbi-example" title="Permanent link">&para;</a></h2>
-<p>We consider the Gaussian Mixture SBI task from <a href="https://arxiv.org/abs/2101.04653">Lueckmann et al, 2021</a>. It consists of inferring the common mean of a mixture of two 2D Gaussian distributions, one with much broader covariance than the other:
-- Prior: <span class="arithmatex">\(p(\theta) = \mathcal{U}(-10,10)\)</span>
-- Simulator: <span class="arithmatex">\(p(x|\theta) = 0.5 \mathcal{N}(\theta, \mathbf{I}_2)+ 0.5 \mathcal{N}(\theta, 0.1 \times \mathbf{I}_2)\)</span>
-- Dimensionality: <span class="arithmatex">\(\theta \in \mathbb{R}^2\)</span>, <span class="arithmatex">\(x \in \mathbb{R}^2\)</span></p>
+<p>We consider the Gaussian Mixture SBI task from <a href="https://arxiv.org/abs/2101.04653">Lueckmann et al, 2021</a>. It consists of inferring the common mean of a mixture of two 2D Gaussian distributions, one with much broader covariance than the other:</p>
+<ul>
+<li>Prior: <span class="arithmatex">\(p(\theta) = \mathcal{U}(-10,10)\)</span></li>
+<li>Simulator: <span class="arithmatex">\(p(x|\theta) = 0.5 \mathcal{N}(\theta, \mathbf{I}_2)+ 0.5 \mathcal{N}(\theta, 0.1 \times \mathbf{I}_2)\)</span></li>
+<li>Dimensionality: <span class="arithmatex">\(\theta \in \mathbb{R}^2\)</span>, <span class="arithmatex">\(x \in \mathbb{R}^2\)</span></li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
@@ -1227,10 +1242,12 @@ $$ p(\theta \mid x) = q_{\phi}(\theta \mid x) \iff p(T_{\phi}^{-1}(\theta; x)\mi
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

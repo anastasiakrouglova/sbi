@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -131,11 +131,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -167,6 +169,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -238,6 +241,7 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Home
     
@@ -256,8 +260,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Tutorials and Examples
@@ -280,6 +285,7 @@
       <a href="../../reference/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     API Reference
     
@@ -300,6 +306,7 @@
     <li class="md-nav__item">
       <a href="../../faq/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     FAQ
@@ -322,6 +329,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -331,6 +339,7 @@
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Contributing
@@ -358,6 +367,7 @@
       <a href="../../contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     How to contribute
     
@@ -379,6 +389,7 @@
     <li class="md-nav__item">
       <a href="../../code_of_conduct/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Code of Conduct
@@ -409,6 +420,7 @@
       <a href="../../citation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Citation
     
@@ -429,6 +441,7 @@
     <li class="md-nav__item">
       <a href="../../credits/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Credits
@@ -538,6 +551,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#obtain-ground-truth-posterior-via-mcmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtain ground truth posterior via MCMC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#train-mnle-including-experimental-conditions" class="md-nav__link">
     <span class="md-ellipsis">
       Train MNLE including experimental conditions
@@ -589,7 +611,7 @@
 
 
 <h1 id="sbi-for-decision-making-models">SBI for decision-making models<a class="headerlink" href="#sbi-for-decision-making-models" title="Permanent link">&para;</a></h1>
-<p>In <a href="https://sbi.readthedocs.io/en/latest/tutorials/12_iid_data_and_permutation_invariant_embeddings.html">a previous
+<p>In <a href="https://sbi.readthedocs.io/en/latest/advanced_tutorials/12_iid_data_and_permutation_invariant_embeddings.html">this
 tutorial</a>,
 we showed how to use SBI with trial-based iid data. Such scenarios can arise,
 for example, in models of perceptual decision making. In addition to trial-based
@@ -830,7 +852,7 @@ Thus, to make MNLE work with experimental conditions, we need to include them in
 <span class="n">theta_and_conditions_o</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="n">theta_o</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">num_trials</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">conditions</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">x_o</span> <span class="o">=</span> <span class="n">sim_wrapper</span><span class="p">(</span><span class="n">theta_and_conditions_o</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="obtain-ground-truth-posterior-via-mcmc">Obtain ground truth posterior via MCMC<a class="headerlink" href="#obtain-ground-truth-posterior-via-mcmc" title="Permanent link">&para;</a></h4>
+<h3 id="obtain-ground-truth-posterior-via-mcmc">Obtain ground truth posterior via MCMC<a class="headerlink" href="#obtain-ground-truth-posterior-via-mcmc" title="Permanent link">&para;</a></h3>
 <p>We obtain a ground-truth posterior via MCMC by using the analytical Binomial-Gamma
 likelihood as before. </p>
 <p>For that, we first the define the actual prior, i.e., the distribution over the
@@ -1054,10 +1076,12 @@ numbers of trails and experimental conditions - all without retraining the MNLE.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

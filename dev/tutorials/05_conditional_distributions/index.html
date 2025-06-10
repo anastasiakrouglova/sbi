@@ -14,15 +14,15 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Analysing variability and compensation mechansims with conditional distributions - sbi</title>
+        <title>Analysing variability and compensation mechanisms with conditional distributions - sbi</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#analysing-variability-and-compensation-mechansims-with-conditional-distributions" class="md-skip">
+        <a href="#analysing-variability-and-compensation-mechanisms-with-conditional-distributions" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Analysing variability and compensation mechansims with conditional distributions
+              Analysing variability and compensation mechanisms with conditional distributions
             
           </span>
         </div>
@@ -131,11 +131,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -167,6 +169,7 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
@@ -238,6 +241,7 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Home
     
@@ -256,8 +260,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../index.md" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Tutorials and Examples
@@ -280,6 +285,7 @@
       <a href="../../reference/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     API Reference
     
@@ -300,6 +306,7 @@
     <li class="md-nav__item">
       <a href="../../faq/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     FAQ
@@ -322,6 +329,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -331,6 +339,7 @@
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
+  
   
   <span class="md-ellipsis">
     Contributing
@@ -358,6 +367,7 @@
       <a href="../../contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     How to contribute
     
@@ -379,6 +389,7 @@
     <li class="md-nav__item">
       <a href="../../code_of_conduct/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Code of Conduct
@@ -409,6 +420,7 @@
       <a href="../../citation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
     Citation
     
@@ -429,6 +441,7 @@
     <li class="md-nav__item">
       <a href="../../credits/" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Credits
@@ -513,12 +526,12 @@
   
 
 
-<h1 id="analysing-variability-and-compensation-mechansims-with-conditional-distributions">Analysing variability and compensation mechansims with conditional distributions<a class="headerlink" href="#analysing-variability-and-compensation-mechansims-with-conditional-distributions" title="Permanent link">&para;</a></h1>
+<h1 id="analysing-variability-and-compensation-mechanisms-with-conditional-distributions">Analysing variability and compensation mechanisms with conditional distributions<a class="headerlink" href="#analysing-variability-and-compensation-mechanisms-with-conditional-distributions" title="Permanent link">&para;</a></h1>
 <p>A central advantage of <code>sbi</code> over parameter search methods such as genetic algorithms is that the posterior captures <strong>all</strong> models that can reproduce experimental data. This allows us to analyse whether parameters can be variable or have to be narrowly tuned, and to analyse compensation mechanisms between different parameters. See also <a href="https://www.nature.com/articles/nn.2735?page=2">Marder and Taylor, 2011</a> for further motivation to identify all models that capture experimental data.</p>
 <p>In this tutorial, we will show how one can use the posterior distribution to identify whether parameters can be variable or have to be finely tuned, and how we can use the posterior to find potential compensation mechanisms between model parameters. To investigate this, we will extract <strong>conditional distributions</strong> from the posterior inferred with <code>sbi</code>.</p>
-<p>Note, you can find the original version of this notebook at <a href="https://github.com/sbi-dev/sbi/blob/main/docs/tutorials/05_conditional_distributions.ipynb">docs/tutorials/05_conditional_distributions.ipynb</a> in the <code>sbi</code> repository.</p>
+<p>Note, you can find the original version of this notebook at <a href="https://github.com/sbi-dev/sbi/blob/main/docs/advanced_tutorials/05_conditional_distributions.ipynb">docs/advanced_tutorials/05_conditional_distributions.ipynb</a> in the <code>sbi</code> repository.</p>
 <h2 id="main-syntax">Main syntax<a class="headerlink" href="#main-syntax" title="Permanent link">&para;</a></h2>
-<p>Asssuming you have already obtained <code>posterior</code>.</p>
+<p>Assuming you have already obtained <code>posterior</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">sbi.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="n">conditional_corrcoeff</span><span class="p">,</span> <span class="n">conditional_pairplot</span>
 
 <span class="c1"># Plot slices through posterior, i.e. conditionals.</span>
@@ -595,7 +608,7 @@
 </code></pre></div>
 <p><img alt="png" src="../05_conditional_distributions_files/05_conditional_distributions_16_0.png" /></p>
 <p>This plot looks completely different from the marginals obtained with <code>pairplot()</code>. As it can be seen on the diagonal plots, if all parameters but one are kept constant, the remaining parameter has to be tuned to a narrow region in parameter space. In addition, the upper diagonal plots show strong correlations: deviations in one parameter can be compensated through changes in another parameter.</p>
-<p>We can summarize these correlations in a conditional correlation matrix, which computes the Pearson correlation coefficient of each of these pairwise plots. This matrix (below) shows strong correlations between many parameters, which can be interpreted as potential compensation mechansims:</p>
+<p>We can summarize these correlations in a conditional correlation matrix, which computes the Pearson correlation coefficient of each of these pairwise plots. This matrix (below) shows strong correlations between many parameters, which can be interpreted as potential compensation mechanisms:</p>
 <div class="highlight"><pre><span></span><code><span class="n">cond_coeff_mat</span> <span class="o">=</span> <span class="n">conditional_corrcoeff</span><span class="p">(</span>
     <span class="n">density</span><span class="o">=</span><span class="n">posterior</span><span class="p">,</span>
     <span class="n">condition</span><span class="o">=</span><span class="n">condition</span><span class="p">,</span>
@@ -612,7 +625,7 @@
 <p><img alt="png" src="../05_conditional_distributions_files/05_conditional_distributions_19_1.png" /></p>
 <p>So far, we have investigated the conditional distribution only at a specific <code>condition</code> sampled from the posterior. In many applications, it makes sense to repeat the above analyses with a different <code>condition</code> (another sample from the posterior), which can be interpreted as slicing the posterior at a different location. Note that <code>conditional_corrcoeff()</code> can directly compute the matrix for several <code>conditions</code> and then outputs the average over them. This can be done by passing a batch of <span class="arithmatex">\(N\)</span> conditions as the <code>condition</code> argument.</p>
 <h2 id="sampling-conditional-distributions">Sampling conditional distributions<a class="headerlink" href="#sampling-conditional-distributions" title="Permanent link">&para;</a></h2>
-<p>So far, we have demonstrated how one can plot 2D conditional distributions with <code>conditional_pairplot()</code> and how one can compute the pairwise conditional correlation coefficient with <code>conditional_corrcoeff()</code>. In some cases, it can be useful to keep a subset of parameters fixed and to vary <strong>more than two</strong> parameters. This can be done by sampling the conditonal posterior <span class="arithmatex">\(p(\theta_i | \theta_{j \neq i}, x_o)\)</span>. As of <code>sbi</code> <code>v0.18.0</code>, this functionality requires using the <a href="https://sbi-dev.github.io/sbi/latest/tutorials/09_sampler_interface/">sampler interface</a>. In this tutorial, we demonstrate this functionality on a linear gaussian simulator with four parameters. We would like to fix the forth parameter to <span class="arithmatex">\(\theta_4=0.2\)</span> and sample the first three parameters given that value, i.e. we want to sample <span class="arithmatex">\(p(\theta_1, \theta_2, \theta_3 | \theta_4 = 0.2, x_o)\)</span>. For an application in neuroscience, see <a href="https://www.biorxiv.org/content/10.1101/2021.07.30.454484v4.abstract">Deistler, Gonçalves, Macke, 2021</a>.</p>
+<p>So far, we have demonstrated how one can plot 2D conditional distributions with <code>conditional_pairplot()</code> and how one can compute the pairwise conditional correlation coefficient with <code>conditional_corrcoeff()</code>. In some cases, it can be useful to keep a subset of parameters fixed and to vary <strong>more than two</strong> parameters. This can be done by sampling the conditional posterior <span class="arithmatex">\(p(\theta_i | \theta_{j \neq i}, x_o)\)</span>. As of <code>sbi</code> <code>v0.18.0</code>, this functionality requires using the <a href="https://sbi.readthedocs.io/en/latest/how_to_guide/09_sampler_interface.html">sampler interface</a>. In this tutorial, we demonstrate this functionality on a linear gaussian simulator with four parameters. We would like to fix the forth parameter to <span class="arithmatex">\(\theta_4=0.2\)</span> and sample the first three parameters given that value, i.e. we want to sample <span class="arithmatex">\(p(\theta_1, \theta_2, \theta_3 | \theta_4 = 0.2, x_o)\)</span>. For an application in neuroscience, see <a href="https://www.biorxiv.org/content/10.1101/2021.07.30.454484v4.abstract">Deistler, Gonçalves, Macke, 2021</a>.</p>
 <p>In this tutorial, we will use NPE, but the same also works for NLE and NRE. First, we define the prior and the simulator and train the deep neural density estimator:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 
@@ -646,7 +659,7 @@
     <span class="n">posterior_estimator</span><span class="p">,</span> <span class="n">prior</span><span class="o">=</span><span class="n">prior</span><span class="p">,</span> <span class="n">x_o</span><span class="o">=</span><span class="n">x_o</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>Now we want to build the conditional potential (please read through the tutorial <a href="https://sbi-dev.github.io/sbi/dev/tutorials/09_sampler_interface/">09_sampler_interface</a> for an explanation of potential functions). For this, we have to pass a <code>condition</code>. In our case, we want to condition the forth parameter on <span class="arithmatex">\(\theta_4=0.2\)</span>. Regardless of how many parameters one wants to condition on, in <code>sbi</code>, one has to pass a <code>condition</code> value for all parameters. The first three values will simply be ignored. We can tell the algorithm which parameters should be kept fixed and which ones should be sampled with the argument <code>dims_to_sample</code>.</p>
+<p>Now we want to build the conditional potential (please read through <a href="https://sbi.readthedocs.io/en/latest/how_to_guide/09_sampler_interface.html">this tutorial</a> for an explanation of potential functions). For this, we have to pass a <code>condition</code>. In our case, we want to condition the forth parameter on <span class="arithmatex">\(\theta_4=0.2\)</span>. Regardless of how many parameters one wants to condition on, in <code>sbi</code>, one has to pass a <code>condition</code> value for all parameters. The first three values will simply be ignored. We can tell the algorithm which parameters should be kept fixed and which ones should be sampled with the argument <code>dims_to_sample</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">conditioned_potential_fn</span><span class="p">,</span> <span class="n">restricted_tf</span><span class="p">,</span> <span class="n">restricted_prior</span> <span class="o">=</span> <span class="n">conditional_potential</span><span class="p">(</span>
     <span class="n">potential_fn</span><span class="o">=</span><span class="n">potential_fn</span><span class="p">,</span>
     <span class="n">theta_transform</span><span class="o">=</span><span class="n">theta_transform</span><span class="p">,</span>
@@ -747,10 +760,12 @@ Generating 20 MCMC inits via resample strategy:   0%|          | 0/20 [00:00&lt;
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
